@@ -1,9 +1,9 @@
 package com.yukaiwen.coolcalculator;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity; // standard activity theme
 import android.os.Bundle;
 
-public class CalcActivity extends AppCompatActivity {
+public class CalcActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
