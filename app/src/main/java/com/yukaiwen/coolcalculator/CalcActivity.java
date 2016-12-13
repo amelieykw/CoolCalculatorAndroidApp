@@ -53,7 +53,7 @@ public class CalcActivity extends Activity {
         resultsView = (TextView)findViewById(R.id.ResultsView);
 
 //      STEP 01 : once the app loads, it sets the resultsView to empty
-        resultsView.setText("");
+        resultsView.setText("0");
 
 //      set the actions
         zeroBtn.setOnClickListener(new View.OnClickListener() {
@@ -157,13 +157,20 @@ public class CalcActivity extends Activity {
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                processOperation(Operation.EQUAL);
             }
         });
 
         clearBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//      STEP 05 : reset everything
+                leftValueStr = "";
+                rightValueStr = "";
+                runningNumber = "";
+                result = 0;
+                resultsView.setText("0");
+                currentOperation = null;
 
             }
         });
