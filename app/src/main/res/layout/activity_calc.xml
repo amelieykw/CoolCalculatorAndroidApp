@@ -1,14 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_calc"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.yukaiwen.coolcalculator.CalcActivity">
+    tools:context="com.yukaiwen.coolcalculator.CalcActivity"
+    android:background="@android:color/background_light">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="#FF38C5C6"
+            android:layout_height="180dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="567"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:textSize="35dp"
+                android:gravity="right|center_vertical"
+                android:paddingRight="30dp"
+                android:layout_marginTop="90dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4">
+
+            <Button
+                android:text="7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/button7"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/button8"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/button9"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:srcCompat="@drawable/divide"
+                android:id="@+id/imageButton"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"></LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
